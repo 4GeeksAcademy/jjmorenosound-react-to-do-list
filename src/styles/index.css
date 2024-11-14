@@ -1,12 +1,12 @@
-
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+.list-box {
+    background-image: url("/workspaces/jjmorenosound-react-to-do-list/src/img/notebook.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  body {
+    background-image:  url("/workspaces/jjmorenosound-react-to-do-list/src/img/desk.jpg");;
+    background-size: cover;
+    background-position: center;
+  
+  }
