@@ -1,12 +1,60 @@
+body {
+  background-image: url("https://img.freepik.com/foto-gratis/calculadora-escribir-suministros-escritorio_23-2147847775.jpg?t=st=1731604771~exp=1731608371~hmac=7732637556f64e23ec4182e44374c479b862b41b29282566c3f7053a1f39e726&w=1060");
+  background-size: cover;
+  background-position: top;
+}
+
+h1 {
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal, bold;
+  color: whitesmoke;
+}
+
+.fa-plus {
+  font-size: 30px;
+  padding-left: 10px;
+  color: whitesmoke;
+}
+
 .list-box {
-    background-image: url("/workspaces/jjmorenosound-react-to-do-list/src/img/notebook.jpg");
-    background-size: cover;
-    background-position: center;
-  }
-  
-  body {
-    background-image:  url("/workspaces/jjmorenosound-react-to-do-list/src/img/desk.jpg");;
-    background-size: cover;
-    background-position: center;
-  
-  }
+  height: 600px;
+  width: 400px;
+  font-size: 24px;
+  background-image: url("https://img.freepik.com/free-vector/flat-design-blue-lined-paper-background_23-2151093965.jpg?t=st=1731605441~exp=1731609041~hmac=1b0af3f22d0188f4f2c507a9f589a1df78aeeae3b3669e57f0879e68d2ea4710&w=1060");
+  background-size: cover;
+  background-position: center;
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal, bold;
+}
+
+
+.list-box ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-box li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5px 0;
+
+}
+
+.list-box li i {
+  font-size: 1rem;
+}
+
+.list-box li:not(:last-child) {
+  margin-bottom: 1px;
+}
+
+
+.list-box li p {
+  margin: 0;
+  font-size: 1rem;
+}

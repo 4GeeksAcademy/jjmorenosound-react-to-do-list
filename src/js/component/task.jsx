@@ -4,21 +4,33 @@ import { TaskInput } from "./taskinput";
 
 export const Task = () => {
   const [values, setValues] = useState([]);
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState([]);
+
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
+
   const addTask = () => {
     if (inputValue.trim() !== "") {
-      setValues((previous) => [...previous, inputValue]);
+      setValues((previous) => [...previous, { text: inputValue, completed: false }]);
       setInputValue("");
     }
   };
 
+
   const removeTask = (indexToRemove) => {
     setValues((previous) => previous.filter((_, index) => index !== indexToRemove));
+  };
+
+
+  const toggleCompletion = (index) => {
+    setValues((previous) =>
+      previous.map((task, i) =>
+        i === index ? { ...task, completed: !task.completed } : task
+      )
+    );
   };
 
   return (
@@ -37,10 +49,15 @@ export const Task = () => {
           <div className="col-md-7 list-box">
             <ul>
               {values.map((item, index) => (
-                <li key={index}>
+                <li key={index} style={{ textDecoration: item.completed ? "line-through" : "none" }}>
                   <div className="input-group mb-3 d-flex justify-content-between align-items-center">
-                    <p>{item}</p>
-                    <i onClick={() => removeTask(index)} className="fa fa-trash"></i>
+                    <p>{item.text}</p>
+                    <div>
+                      <i onClick={() => toggleCompletion(index)} className="fa fa-check pe-1">
+                        {item.completed ? "Undo" : ""}
+                      </i>
+                      <i onClick={() => removeTask(index)} className="fa fa-trash"></i>
+                    </div>
                   </div>
                 </li>
               ))}
