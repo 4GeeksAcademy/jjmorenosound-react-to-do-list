@@ -1,9 +1,17 @@
 body {
-  background-image: url("https://img.freepik.com/foto-gratis/calculadora-escribir-suministros-escritorio_23-2147847775.jpg?t=st=1731604771~exp=1731608371~hmac=7732637556f64e23ec4182e44374c479b862b41b29282566c3f7053a1f39e726&w=1060");
+  background-image: url("https://img.freepik.com/foto-gratis/suministros-escritura-cerca-portapapeles_23-2147847741.jpg?t=st=1731699777~exp=1731703377~hmac=ec7bd6435b65c79f5be7da630cabbc02d11ecc4e1226f96dc3a479fcc9b39f27&w=1060");
   background-size: cover;
   background-position: top;
 }
 
+.pending-box {
+  padding-top: 30px;
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal, bold;
+  color: whitesmoke;
+}
 h1 {
   font-family: "Edu AU VIC WA NT Pre", cursive;
   font-optical-sizing: auto;
@@ -57,4 +65,11 @@ h1 {
 .list-box li p {
   margin: 0;
   font-size: 1rem;
+}
+
+.fa-trash {
+  display: none;
+}
+.list-box li p:hover + .fa-trash {
+  display: block;
 }

@@ -40,9 +40,18 @@ export const Task = () => {
           <div className="col-6 d-flex align-items-center">
             <TaskInput className="me-2" value={inputValue} onChange={handleInputChange} />
             <i onClick={addTask} className="fa fa-plus"></i>
+
+          </div>
+         
+          <div className="row pending-box justify-content-end align-items-end">
+            <div className="col-5 d-flex align-items-center">
+              
+              <h5>Tasks pending:  {values.length} </h5>
+            </div>
           </div>
         </div>
       </div>
+
 
       <div className="container-fluid mt-5">
         <div className="row d-flex justify-content-center align-items-center">
