@@ -16,7 +16,8 @@ export const Task = () => {
     if (inputValue.trim() !== "") {
       setValues((previous) => [...previous, { text: inputValue, completed: false }]);
       setInputValue("");
-    }
+    };
+
   };
 
 
@@ -42,10 +43,10 @@ export const Task = () => {
             <i onClick={addTask} className="fa fa-plus"></i>
 
           </div>
-         
+
           <div className="row pending-box justify-content-end align-items-end">
             <div className="col-5 d-flex align-items-center">
-              
+
               <h5>Tasks pending:  {values.length} </h5>
             </div>
           </div>
@@ -56,21 +57,25 @@ export const Task = () => {
       <div className="container-fluid mt-5">
         <div className="row d-flex justify-content-center align-items-center">
           <div className="col-md-7 list-box">
-            <ul>
-              {values.map((item, index) => (
-                <li key={index} style={{ textDecoration: item.completed ? "line-through" : "none" }}>
-                  <div className="input-group mb-3 d-flex justify-content-between align-items-center">
-                    <p>{item.text}</p>
-                    <div>
-                      <i onClick={() => toggleCompletion(index)} className="fa fa-check pe-1">
-                        {item.completed ? "Undo" : ""}
-                      </i>
-                      <i onClick={() => removeTask(index)} className="fa fa-trash"></i>
+            {values.length === 0 ? (
+              <p className="text-center">You're all caught up!</p>
+            ) : (
+              <ul>
+                {values.map((item, index) => (
+                  <li key={index} style={{ textDecoration: item.completed ? "line-through" : "none" }}>
+                    <div className="input-group mb-3 d-flex justify-content-between align-items-center">
+                      <p>{item.text}</p>
+                      <div>
+                        <i onClick={() => toggleCompletion(index)} className="fa fa-check pe-1">
+                          {item.completed ? "Undo" : ""}
+                        </i>
+                        <i onClick={() => removeTask(index)} className="fa fa-trash"></i>
+                      </div>
                     </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </div>

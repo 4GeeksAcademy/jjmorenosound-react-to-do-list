@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://img.freepik.com/foto-gratis/suministros-escritura-cerca-portapapeles_23-2147847741.jpg?t=st=1731699777~exp=1731703377~hmac=ec7bd6435b65c79f5be7da630cabbc02d11ecc4e1226f96dc3a479fcc9b39f27&w=1060");
+  background-image: url("https://c.pxhere.com/photos/b0/eb/desk_workspace_camera_computer_ipad-13595.jpg!d");
   background-size: cover;
   background-position: top;
 }
@@ -37,6 +37,10 @@ h1 {
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal, bold;
+  opacity: 95%;
+  filter: contrast(95%);
+  filter: blur(0.5px); 
+
 }
 
 
@@ -69,7 +73,10 @@ h1 {
 
 .fa-trash {
   display: none;
+  
+  
 }
-.list-box li p:hover + .fa-trash {
-  display: block;
+.list-box li:hover .fa-trash {
+  display:inline;
+  padding-bottom: 5px;
 }
